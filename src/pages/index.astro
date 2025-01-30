@@ -1,27 +1,14 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = 'The Astronaut!';
-
 const isAdmin = true;
 const isFinished = false;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<h1>Newly Generated Astro Page, by {pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
+	<h2>Launch Up Soon!</h2>
 
-		<p>Find all written routes below</p>
-		<Navigation />
-
-		{isAdmin && <p>Only admin can see this message.</p>}
-		{isAdmin && isFinished && <p>If you're an admin, and already finish the blogs, you'll see this message..</p>}
-	</body>
-</html>
+	{isAdmin && <p>Only admin can see this message.</p>}
+	{isAdmin && isFinished && <p>If you're an admin, and already finish the blogs, you'll see this message..</p>}
+</BaseLayout>

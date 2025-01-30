@@ -1,0 +1,20 @@
+---
+// const platform = "Github";
+// const username = "Deppfellow";
+import Social from "./Social.astro";
+---
+
+<footer>
+  <!-- <p>Get to know about {username} from <a href={`https://www.${platform}.com/${username}`}>{platform}</a></p> -->
+  <Social platform="x" username="fidrafif" />
+  <Social platform="github" username="deppfellow" />
+  <Social platform="youtube" username="@deppdump" />
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>

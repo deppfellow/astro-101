@@ -1,7 +1,13 @@
 ---
-
+const { link, title } = Astro.props;
 ---
+<a href={`/${link}`}>{title}</a>
 
-<a href="/">Home</a>
-<a href="/about">About</a>
-<a href="/blogs">Blogs</a>
+<style>
+  a {
+    padding: 2px 8px;
+    color: white;
+    background-color: purple;
+    text-decoration: none;
+  }
+</style>

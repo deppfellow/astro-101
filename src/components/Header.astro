@@ -1,0 +1,21 @@
+---
+import Navigation from "./Navigation.astro"
+import Hamburger from "./Hamburger.astro"
+
+---
+
+<nav class="nav-links">
+  <Hamburger />
+  <Navigation link="" title="Home" />
+  <Navigation link="about" title="About Me" />
+  <Navigation link="blogs" title="Blog Posts" />
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
