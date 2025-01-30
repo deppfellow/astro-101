@@ -1,5 +1,10 @@
 ---
+import Navigation from "../components/Navigation.astro";
 
+const pageTitle = 'The Astronaut!';
+
+const isAdmin = true;
+const isFinished = false;
 ---
 
 <html lang="en">
@@ -8,9 +13,15 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>Newly Generated Astro Page, by {pageTitle}</h1>
+
+		<p>Find all written routes below</p>
+		<Navigation />
+
+		{isAdmin && <p>Only admin can see this message.</p>}
+		{isAdmin && isFinished && <p>If you're an admin, and already finish the blogs, you'll see this message..</p>}
 	</body>
 </html>
